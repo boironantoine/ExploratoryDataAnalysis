@@ -21,8 +21,8 @@ fdata2$Global_active_power <- as.numeric(fdata2$Global_active_power)
 
 fdata2$Datetime <- as.POSIXct(paste(as.Date(fdata2$Date, format="%d/%m/%Y"), fdata2$Time))
 
-## The plot, 
-par(mfrow=c(2,2), oma=c(0,0,2,0)) #The oma commend changes margin, so that the scales appear the same than the given plots
+## The plot, using the par command to place the different graphs
+par(mfrow=c(2,2), oma=c(0,0,2,0)) #The oma command changes margin, so that the scales appear the same than the given plots
 with(fdata2, {
   plot(Global_active_power~Datetime, type="l", 
        ylab="Global Active Power", xlab="")
@@ -39,5 +39,5 @@ with(fdata2, {
 })
 
 ## Saving the plot
-dev.copy(png, file="plot4.png", height=480, width=480)
+dev.copy(png, file="plot4.png", height=600, width=600)
 dev.off()
