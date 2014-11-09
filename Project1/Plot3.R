@@ -34,5 +34,5 @@ legend("topright", col=c("black", "orangered", "dodgerblue"), lty=1, lwd=2,
 
 
 ## Saving the plot
-dev.copy(png, file="plot3.png", height=480, width=480)
+dev.copy(png, file="plot3.png", height=600, width=600)
 dev.off()
